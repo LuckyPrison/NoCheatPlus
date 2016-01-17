@@ -62,7 +62,7 @@ public class Open extends Check implements IDisableListener{
      * @return If cancelling some event is opportune (open inventory and cancel flag set).
      */
     public boolean check(final Player player) {
-        if (!isEnabled(player) || !InventoryUtil.hasInventoryOpen(player)) {
+        if (/*!isEnabled(player) || */!InventoryUtil.hasInventoryOpen(player)) {
             return false;
         }
         final InventoryConfig cc = InventoryConfig.getConfig(player);
